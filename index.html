@@ -80,6 +80,81 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Marketing with R -- Recap 1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/22/Marketing%20with%20R%20--%20Recap%201/" class="article-date">
+  <time datetime="2020-10-22T12:56:34.000Z" itemprop="datePublished">2020-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/22/Marketing%20with%20R%20--%20Recap%201/">Marketing with R -- Recap 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>My first learning block at Imperial College ended last week. It also brought to an end of the Marketing Analytics module, which is probably the best analytical module that I have ever attended.</p>
+<p>So here I would like to do a reorganized recap of the module for myself and I hope it may also help whoever else ‘accidentally’ ends up reading this blog.</p>
+<p>Here goes the first episode of ‘Marketing with R – Recap,’ an introduction of Rstudio and segmentation with R.</p>
+<p><em>Acknowledgement: I would like to express my sincere gratitude to Dr. Stijn Maesen and Imperial College Business School who generously shared his knowledge with me and provided a terrific learning environment.</em><br><img src="/images/ICBS-1.jpg" alt="Imperial College London"></p>
+<h2 id="Data-amp-Marketing"><a href="#Data-amp-Marketing" class="headerlink" title="Data &amp; Marketing"></a>Data &amp; Marketing</h2><p>We have been hearing people yelling ‘Data is everything’ for a long time. But how is data used in your marketing department and where should a beginner start from?</p>
+<p>Mike Grigsby gave a perfect example in his book ‘<em>Marketing Analytics: A Practical Guide to Improving Consumer Insights Using Data Techniques</em>.’ I would like to provide a scenario inspired by his book. Please imagine you are the head of the marketing department in a video game company which has already launched several games in the market. It now possesses the historical sales data (probably on multiple platforms separately), price, advertisement cost, channel cost, promotion data, user account data, and other marketing-related data. These data were generated automatically when products were sold.</p>
+<p><strong>ROMI</strong> |<br>As the head of the marketing department, you might be interested in proving the <strong>Return on Marketing Investment (ROMI)</strong>. Here is the thing that can be done: build a regression model using sales data as the response variable and price, marketing cost, and even time as explanatory variables. By doing so, the marketing team will know how does their effort in pricing, advertising, and managing promotion affect actual sales performance. You can also build a reliable estimation model to predict how will the market respond to your marketing decisions in the future.</p>
+<p><strong>Segmentation</strong> |<br>Since the company launched multiple games, you may want different game approaches different target players appropriately. You can easily segment your users by clustering analysis using the personal data you collected when they created their accounts. By doing so, you will know what kind of players want what kind of games. For example, you may find that First-person Shooter gamers have a totally different price sensitivity from the Simulation Video Games players. You will also find different social status, ages, and income status among different groups of players. You then can build your strategy to approach these targets differently and appropriately.</p>
+<p><strong>Client Management &amp; Social Media Management</strong> |<br>It’s all about keeping your players happy. You always want a low churn rate and keep the valuable clients. A classification and regression tree (CART) analysis will allow you to identify the players who are valuable (who will spend a lot of money on gaming) but are going to stop playing your games. A sentiment analysis keeps you updated with how people are feeling about your games on social media without reading thousands of posts.</p>
+<h2 id="Get-Started-with-R"><a href="#Get-Started-with-R" class="headerlink" title="Get Started with R"></a>Get Started with R</h2><p>Of course, I am sure that other languages work perfectly as well, but here I would like to introduce R. <strong>R</strong> is a programming language and free software environment for statistical computing and graphics. It was created by two Genius, Ross Ihaka and Robert Gentleman, at the University of Auckland.</p>
+<p>Rstudio is opensource visualization software that I will use in later posts. You can download it freely through this link: <a target="_blank" rel="noopener" href="https://rstudio.com/products/rstudio/download/">https://rstudio.com/products/rstudio/download/</a></p>
+<p>Before playing with R, you need to first set a working directory where you are going to store your R scripts and datasets.</p>
+<pre><code># Set your working directory
+  setwd(&quot;E:/Imperial College/Marketing Analytics/R working directory&quot;)</code></pre>
+<p>Alternatively, you can click the ‘choose directory’ button under the ‘session’ dropdown menu:<br><img src="/images/setworkinginR.png" alt="Set working directory in Rstudio"></p>
+<p>Then we will also need some packages that allow us to manipulate data:</p>
+<pre><code># Install packages
+  install.packages(&quot;package name&quot;)
+
+# Load packages
+  library(package name)</code></pre>
+<p>Here we need these packages:</p>
+<pre><code># Install packages
+  install.packages(&quot;tidyverse&quot;)
+  install.packages(&quot;readxl&quot;)
+  install.packages(&quot;corrplot&quot;)
+  install.packages(&quot;ggplot2&quot;)
+  install.packages(&quot;reshape2&quot;)
+
+# Load packages
+  library(tidyverse)
+  library(readxl)
+  library(corrplot)
+  library(ggplot2)
+  require(reshape2)</code></pre>
+<p>Keep in mind that you need to load packages again every time to open Rstudio.</p>
+<p>Alright then, we are clear to go now! I will start to manipulate a sales dataset from Airbnb in the next post (It is also open for download: <a target="_blank" rel="noopener" href="http://tomslee.net/airbnb-data-collection-get-the-data">http://tomslee.net/airbnb-data-collection-get-the-data</a>).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/22/Marketing%20with%20R%20--%20Recap%201/" data-id="ckgkw8rnd0001kwvxdydzf9ek" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Marketing-Analytics/" rel="tag">Marketing Analytics</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-A-TAM-SAM-SOM-Application-in-No-Man-s-Sky" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/" class="article-date">
@@ -120,8 +195,7 @@ ga('send', 'pageview');
 <p>The <strong>Total Available Market</strong> here is the number of people who can drink bottled water, which is the total population of this market (please keep in mind that in some cases not all people can consume your product/service). The <strong>Serviceable Available Market</strong> will exclude those who drink tap water instead of bottled water. The <strong>Serviceable Obtainable Market</strong> is your estimation of your market share (you can estimate this using your competitors’ performance and your own performance in other markets).</p>
 <p><img src="/images/TAM-SAM-SOM.png" alt="James Eteen, 2020"></p>
 <p>Voila, that’s the basic idea and now we can estimate our revenue in the market.</p>
-<h2 id="The-real-life-application–No-Man’s-Sky"><a href="#The-real-life-application–No-Man’s-Sky" class="headerlink" title="The real-life application–No Man’s Sky"></a>The real-life application–No Man’s Sky</h2><p><em>Why did I pick No Man’s Sky?</em><br><em>Because I want a job at Hello Games.</em> XD</p>
-<p>I would like to put myself in this simulation situation: I want to launch No Man’s Sky in China and invest in localisation, marketing and all the supporting investment in this market. But how can I assess the potential return on investment?</p>
+<h2 id="The-real-life-application–No-Man’s-Sky"><a href="#The-real-life-application–No-Man’s-Sky" class="headerlink" title="The real-life application–No Man’s Sky"></a>The real-life application–No Man’s Sky</h2><p>I would like to put myself in this simulation situation: I want to launch No Man’s Sky in China and invest in localisation, marketing and all the supporting investment in this market. But how can I assess the potential return on investment?</p>
 <h3 id="TAM"><a href="#TAM" class="headerlink" title="TAM |"></a>TAM |</h3><p><strong>Firstly</strong>, as we have already known that No Man’s Sky was launched in both PC and gaming consoles (Xbox and PlayStation), the TAM should be total PC owners plus total consoles owner in China. <a target="_blank" rel="noopener" href="https://nikopartners.com/chinas-console-tv-based-games-market/">Nikopartner</a> reported that there were 11 million console users in China in 2019. However, it becomes very tricky when calculating total PC users. Neither World bank nor OECD has this data. So here I am just going to use Statista’s <a target="_blank" rel="noopener" href="https://www.statista.com/statistics/278758/number-of-computers-per-100-households-in-china/#:~:text=Number%20of%20computers%20per%20100%20households%20in%20China%202000-2018&text=This%20statistic%20depicts%20the%20number,households%20in%20the%20previous%20year.">Number of computers per 100 households in China</a> and <a target="_blank" rel="noopener" href="https://www.statista.com/statistics/1037593/china-urban-household-number-by-affluency/">Urban household number in China</a> to estimate. So, there were roughly 72.09 million PC users in Chinese urban areas in 2019. (So here we narrow down our target market to Chinese urban market)<br><strong>Now we have the TAM = 83.09 million users in 2019</strong></p>
 <h3 id="SAM"><a href="#SAM" class="headerlink" title="SAM |"></a>SAM |</h3><p><img src="/images/gamerevenuechina.png" alt="Lai Lin Thomala, Gaming Industry Revenue, 2020"><br>With the help of <a target="_blank" rel="noopener" href="https://www-statista-com.iclibezp1.cc.ic.ac.uk/statistics/445407/console-and-pc-game-revenue-in-china/">Statista</a>, this part is relatively easy.</p>
 <p><strong>So now, SAM = 1,192 million yuan from 2015 to 2019</strong></p>
@@ -137,9 +211,11 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/" data-id="ckfrz9kq60001n4vx14uo35di" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/" data-id="ckgkw8rn20000kwvx8siw3hm0" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stratigic-Marketing/" rel="tag">Stratigic Marketing</a></li></ul>
+
     </footer>
   </div>
   
@@ -147,9 +223,9 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-this" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-StartfromScratch" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/27/this/" class="article-date">
+    <a href="/2020/09/27/StartfromScratch/" class="article-date">
   <time datetime="2020-09-27T20:31:21.000Z" itemprop="datePublished">2020-09-27</time>
 </a>
     
@@ -161,7 +237,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/27/this/">Why did I do this?</a>
+      <a class="article-title" href="/2020/09/27/StartfromScratch/">Start from Scratch</a>
     </h1>
   
 
@@ -193,7 +269,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/27/this/" data-id="ckfrz9kpl0000n4vxeopiaurp" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/27/StartfromScratch/" data-id="ckgl7634f00007ovx6lqp2789" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,15 +289,29 @@ ga('send', 'pageview');
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Marketing-Analytics/" rel="tag">Marketing Analytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stratigic-Marketing/" rel="tag">Stratigic Marketing</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Marketing-Analytics/" style="font-size: 10px;">Marketing Analytics</a> <a href="/tags/Stratigic-Marketing/" style="font-size: 10px;">Stratigic Marketing</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
     </div>
   </div>
 
@@ -234,11 +324,15 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2020/10/22/Marketing%20with%20R%20--%20Recap%201/">Marketing with R -- Recap 1</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/">A TAM-SAM-SOM Application in No-Man&#39;s-Sky</a>
           </li>
         
           <li>
-            <a href="/2020/09/27/this/">Why did I do this?</a>
+            <a href="/2020/09/27/StartfromScratch/">Start from Scratch</a>
           </li>
         
       </ul>

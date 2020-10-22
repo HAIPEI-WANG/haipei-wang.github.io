@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-179137648-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Marketing with R -- Recap 1 | Welcome to Haipei&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="My first learning block at Imperial College ended last week. It also brought to an end of the Marketing Analytics module, which is probably the best analytical module that I have ever attended. So her">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Marketing with R -- Recap 1">
+<meta property="og:url" content="http://example.com/2020/10/22/Marketing%20with%20R%20--%20Recap%201/index.html">
+<meta property="og:site_name" content="Welcome to Haipei&#39;s Blog">
+<meta property="og:description" content="My first learning block at Imperial College ended last week. It also brought to an end of the Marketing Analytics module, which is probably the best analytical module that I have ever attended. So her">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/ICBS-1.jpg">
+<meta property="og:image" content="http://example.com/images/setworkinginR.png">
+<meta property="article:published_time" content="2020-10-22T12:56:34.000Z">
+<meta property="article:modified_time" content="2020-10-22T19:04:53.566Z">
+<meta property="article:author" content="Haipei WANG">
+<meta property="article:tag" content="Marketing Analytics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ICBS-1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Welcome to Haipei&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Welcome to Haipei&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Marketing with R -- Recap 1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/22/Marketing%20with%20R%20--%20Recap%201/" class="article-date">
+  <time datetime="2020-10-22T12:56:34.000Z" itemprop="datePublished">2020-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Marketing with R -- Recap 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>My first learning block at Imperial College ended last week. It also brought to an end of the Marketing Analytics module, which is probably the best analytical module that I have ever attended.</p>
+<p>So here I would like to do a reorganized recap of the module for myself and I hope it may also help whoever else ‘accidentally’ ends up reading this blog.</p>
+<p>Here goes the first episode of ‘Marketing with R – Recap,’ an introduction of Rstudio and segmentation with R.</p>
+<p><em>Acknowledgement: I would like to express my sincere gratitude to Dr. Stijn Maesen and Imperial College Business School who generously shared his knowledge with me and provided a terrific learning environment.</em><br><img src="/images/ICBS-1.jpg" alt="Imperial College London"></p>
+<h2 id="Data-amp-Marketing"><a href="#Data-amp-Marketing" class="headerlink" title="Data &amp; Marketing"></a>Data &amp; Marketing</h2><p>We have been hearing people yelling ‘Data is everything’ for a long time. But how is data used in your marketing department and where should a beginner start from?</p>
+<p>Mike Grigsby gave a perfect example in his book ‘<em>Marketing Analytics: A Practical Guide to Improving Consumer Insights Using Data Techniques</em>.’ I would like to provide a scenario inspired by his book. Please imagine you are the head of the marketing department in a video game company which has already launched several games in the market. It now possesses the historical sales data (probably on multiple platforms separately), price, advertisement cost, channel cost, promotion data, user account data, and other marketing-related data. These data were generated automatically when products were sold.</p>
+<p><strong>ROMI</strong> |<br>As the head of the marketing department, you might be interested in proving the <strong>Return on Marketing Investment (ROMI)</strong>. Here is the thing that can be done: build a regression model using sales data as the response variable and price, marketing cost, and even time as explanatory variables. By doing so, the marketing team will know how does their effort in pricing, advertising, and managing promotion affect actual sales performance. You can also build a reliable estimation model to predict how will the market respond to your marketing decisions in the future.</p>
+<p><strong>Segmentation</strong> |<br>Since the company launched multiple games, you may want different game approaches different target players appropriately. You can easily segment your users by clustering analysis using the personal data you collected when they created their accounts. By doing so, you will know what kind of players want what kind of games. For example, you may find that First-person Shooter gamers have a totally different price sensitivity from the Simulation Video Games players. You will also find different social status, ages, and income status among different groups of players. You then can build your strategy to approach these targets differently and appropriately.</p>
+<p><strong>Client Management &amp; Social Media Management</strong> |<br>It’s all about keeping your players happy. You always want a low churn rate and keep the valuable clients. A classification and regression tree (CART) analysis will allow you to identify the players who are valuable (who will spend a lot of money on gaming) but are going to stop playing your games. A sentiment analysis keeps you updated with how people are feeling about your games on social media without reading thousands of posts.</p>
+<h2 id="Get-Started-with-R"><a href="#Get-Started-with-R" class="headerlink" title="Get Started with R"></a>Get Started with R</h2><p>Of course, I am sure that other languages work perfectly as well, but here I would like to introduce R. <strong>R</strong> is a programming language and free software environment for statistical computing and graphics. It was created by two Genius, Ross Ihaka and Robert Gentleman, at the University of Auckland.</p>
+<p>Rstudio is opensource visualization software that I will use in later posts. You can download it freely through this link: <a target="_blank" rel="noopener" href="https://rstudio.com/products/rstudio/download/">https://rstudio.com/products/rstudio/download/</a></p>
+<p>Before playing with R, you need to first set a working directory where you are going to store your R scripts and datasets.</p>
+<pre><code># Set your working directory
+  setwd(&quot;E:/Imperial College/Marketing Analytics/R working directory&quot;)</code></pre>
+<p>Alternatively, you can click the ‘choose directory’ button under the ‘session’ dropdown menu:<br><img src="/images/setworkinginR.png" alt="Set working directory in Rstudio"></p>
+<p>Then we will also need some packages that allow us to manipulate data:</p>
+<pre><code># Install packages
+  install.packages(&quot;package name&quot;)
+
+# Load packages
+  library(package name)</code></pre>
+<p>Here we need these packages:</p>
+<pre><code># Install packages
+  install.packages(&quot;tidyverse&quot;)
+  install.packages(&quot;readxl&quot;)
+  install.packages(&quot;corrplot&quot;)
+  install.packages(&quot;ggplot2&quot;)
+  install.packages(&quot;reshape2&quot;)
+
+# Load packages
+  library(tidyverse)
+  library(readxl)
+  library(corrplot)
+  library(ggplot2)
+  require(reshape2)</code></pre>
+<p>Keep in mind that you need to load packages again every time to open Rstudio.</p>
+<p>Alright then, we are clear to go now! I will start to manipulate a sales dataset from Airbnb in the next post (It is also open for download: <a target="_blank" rel="noopener" href="http://tomslee.net/airbnb-data-collection-get-the-data">http://tomslee.net/airbnb-data-collection-get-the-data</a>).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/22/Marketing%20with%20R%20--%20Recap%201/" data-id="ckgkw8rnd0001kwvxdydzf9ek" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Marketing-Analytics/" rel="tag">Marketing Analytics</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">A TAM-SAM-SOM Application in No-Man&#39;s-Sky</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Marketing-Analytics/" rel="tag">Marketing Analytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stratigic-Marketing/" rel="tag">Stratigic Marketing</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Marketing-Analytics/" style="font-size: 10px;">Marketing Analytics</a> <a href="/tags/Stratigic-Marketing/" style="font-size: 10px;">Stratigic Marketing</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/22/Marketing%20with%20R%20--%20Recap%201/">Marketing with R -- Recap 1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/29/A-TAM-SAM-SOM-Application-in-No-Man-s-Sky/">A TAM-SAM-SOM Application in No-Man&#39;s-Sky</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/27/StartfromScratch/">Start from Scratch</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Haipei WANG<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
